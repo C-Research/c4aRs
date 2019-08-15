@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 ^c4ard_0\.1\.0\.tar\.gz$
 ^Builds/*
+^README\.md$
