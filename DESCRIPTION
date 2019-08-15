@@ -8,3 +8,4 @@ Description: This package provides color schemes, maps, and other tools to assis
 License: none
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.1
