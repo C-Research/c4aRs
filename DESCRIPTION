@@ -1,7 +1,7 @@
 Package: c4aRs
 Type: Package
 Title: Resources for c4 R Visualizations
-Version: 0.1.0
+Version: 0.1.2
 Author: Patrick Baine and Max Kearns
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: This package provides color schemes, maps, and other tools to assist in the production of quality R visualizations.
