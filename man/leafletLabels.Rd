@@ -2,7 +2,7 @@
 \alias{leafletLabel}
 \title{Neatly format leaflet tooltips}
 \usage{
-leafletLabel(routes, c("Type", "Name"), c("type", "name"), title = "Origin")
+leafletLabel(df, textNames, colNames, titleCol = NULL, title = NULL, size = 2, titleSize = 4)
 }
 \arguments{
 \item{df}{The dataframe you wish to label}

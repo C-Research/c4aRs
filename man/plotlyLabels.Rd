@@ -2,7 +2,7 @@
 \alias{leafletLabel}
 \title{Neatly format plotly tooltips}
 \usage{
-leafletLabel(routes, c("Type", "Name"), c("type", "name"), title = "Origin")
+plotlyLabel(df, textNames, colNames, titleCol = NULL, title = NULL)
 }
 \arguments{
 \item{df}{The dataframe you wish to label}
