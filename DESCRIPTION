@@ -3,7 +3,7 @@ Type: Package
 Title: Resources for c4 R Visualizations
 Version: 0.1.6
 Author: Patrick Baine and Max Kearns
-Maintainer: The package maintainer <yourself@somewhere.net>
+Maintainer: Max Kearns maxwell@c4ads
 Description: This package provides color schemes, maps, and other tools to assist in the production of quality R visualizations.
 License: none
 Encoding: UTF-8
