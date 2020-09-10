@@ -1,0 +1,10 @@
+fixCountryCol           Standardize a vector of countries
+fixMultCols             Easily replace multiple columns at the same
+                        time.
+leafletLabel            Neatly format leaflet tooltips
+plotlyLabel             Neatly format plotly tooltips
+selectByMultCols        Select all rows that have a value in certain
+                        columns.
+traffickingInstanceCount
+                        Select all rows that have a value in certain
+                        columns.

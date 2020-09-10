@@ -1,11 +1,16 @@
 Package: c4aRs
 Type: Package
-Title: Resources for c4 R Visualizations
-Version: 0.1.6
+Title: Resources for C4 R Users
+Version: 0.1.7
 Author: Patrick Baine and Max Kearns
 Maintainer: Max Kearns <maxwell@c4ads.org>
-Description: This package provides color schemes, maps, and other tools to assist in the production of quality R visualizations.
+Description: Provides color schemes, maps, and other tools to assist in the production of quality R visualizations.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
+Imports: dplyr, stringr, purrr, RColorBrewer, ggplot2, tidyr
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

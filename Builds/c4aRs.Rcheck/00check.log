@@ -1,0 +1,181 @@
+* using log directory ‘/Users/mac49/Documents/c4aRs/Builds/c4aRs.Rcheck’
+* using R version 3.6.1 (2019-07-05)
+* using platform: x86_64-apple-darwin15.6.0 (64-bit)
+* using session charset: UTF-8
+* using option ‘--as-cran’
+* checking for file ‘c4aRs/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘c4aRs’ version ‘0.1.6’
+* package encoding: UTF-8
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Max Kearns <maxwell@c4ads.org>’
+
+New submission
+
+The Title field should be in title case. Current version is:
+‘Resources for c4 R Visualizations’
+In title case that is:
+‘Resources for C4 R Visualizations’
+
+The Description field should not start with the package name,
+  'This package' or similar.
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘c4aRs’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... WARNING
+Subdirectory ‘data’ contains no data sets.
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking use of S3 registration ... OK
+* checking dependencies in R code ... WARNING
+'::' or ':::' import not declared from: ‘ggplot2’
+Unexported object imported by a ':::' call: ‘ggplot2:::manual_scale’
+  See the note in ?`:::` about the use of this operator.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+fixMultCols: no visible global function definition for ‘%>%’
+leafletLabel: no visible global function definition for ‘%>%’
+leafletLabel: no visible global function definition for ‘mutate’
+leafletLabel: no visible binding for global variable ‘label’
+plotlyLabel: no visible global function definition for ‘%>%’
+plotlyLabel: no visible global function definition for ‘mutate’
+plotlyLabel: no visible binding for global variable ‘label’
+scale_fill_ROUTES_dbs: no visible global function definition for
+  ‘setNames’
+scale_fill_ROUTES_modeofT: no visible global function definition for
+  ‘setNames’
+scale_fill_ROUTES_modeofT: no visible global function definition for
+  ‘brewer.pal’
+selectByMultCols: no visible global function definition for ‘%>%’
+selectByMultCols: no visible global function definition for ‘filter_at’
+selectByMultCols: no visible global function definition for ‘any_vars’
+selectByMultCols: no visible binding for global variable ‘.’
+traffickingInstanceCount: no visible global function definition for
+  ‘%>%’
+traffickingInstanceCount: no visible global function definition for
+  ‘mutate_if’
+traffickingInstanceCount: no visible global function definition for
+  ‘map’
+traffickingInstanceCount: no visible global function definition for
+  ‘rename’
+traffickingInstanceCount: no visible binding for global variable ‘Freq’
+traffickingInstanceCount: no visible global function definition for
+  ‘arrange’
+traffickingInstanceCount: no visible binding for global variable
+  ‘count’
+traffickingInstanceCount : helpFunc1: no visible global function
+  definition for ‘%>%’
+traffickingInstanceCount : helpFunc1: no visible global function
+  definition for ‘map’
+traffickingInstanceCount : helpFunc1: no visible global function
+  definition for ‘rename’
+traffickingInstanceCount : helpFunc1: no visible global function
+  definition for ‘separate_rows’
+traffickingInstanceCount : helpFunc1: no visible binding for global
+  variable ‘val’
+traffickingInstanceCount : helpFunc1: no visible global function
+  definition for ‘mutate’
+traffickingInstanceCount: no visible binding for global variable
+  ‘bind_rows’
+traffickingInstanceCount: no visible global function definition for
+  ‘group_by_all’
+traffickingInstanceCount: no visible global function definition for
+  ‘tally’
+traffickingInstanceCount: no visible binding for global variable ‘n’
+traffickingInstanceCount: no visible global function definition for
+  ‘ungroup’
+traffickingInstanceCount: no visible global function definition for
+  ‘pivot_wider’
+traffickingInstanceCount: no visible binding for global variable ‘val’
+traffickingInstanceCount: no visible binding for global variable
+  ‘replace_na’
+traffickingInstanceCount: no visible global function definition for
+  ‘mutate’
+traffickingInstanceCount: no visible binding for global variable ‘.’
+traffickingInstanceCount: no visible binding for global variable
+  ‘total’
+Undefined global functions or variables:
+  %>% . Freq any_vars arrange bind_rows brewer.pal count filter_at
+  group_by_all label map mutate mutate_if n pivot_wider rename
+  replace_na separate_rows setNames tally total ungroup val
+Consider adding
+  importFrom("stats", "setNames")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... NOTE
+Rd file 'leafletLabel.Rd':
+  \usage lines wider than 90 characters:
+     leafletLabel(df, textNames, colNames, titleCol = NULL, title = NULL, size = 2, titleSize = 4)
+
+These lines will be truncated in the PDF manual.
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  ‘c4_cols_all’ ‘c4_cols_blacks’ ‘c4_cols_blues’ ‘c4_cols_green_greys’
+  ‘c4_cols_greens’ ‘c4_cols_greys’ ‘c4_cols_light_blues’
+  ‘c4_cols_olives’ ‘c4_cols_purples’ ‘c4_cols_reds’ ‘c4_cols_tans’
+  ‘c4_cols_teals’ ‘c4_cols_yellows’ ‘scale_fill_ROUTES_dbs’
+  ‘scale_fill_ROUTES_modeofT’
+All user-level objects in a package should have documentation entries.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking for code/documentation mismatches ... WARNING
+Codoc mismatches from documentation object 'leafletLabel':
+leafletLabel
+  Code: function(df, textNames, colNames, titleCol = NULL, title =
+                 NULL, size = 2, titleSize = 4, digits = 2)
+  Docs: function(df, textNames, colNames, titleCol = NULL, title =
+                 NULL, size = 2, titleSize = 4)
+  Argument names in code not in docs:
+    digits
+
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in documentation object 'traffickingInstanceCount'
+  ‘by_col’
+Documented arguments not in \usage in documentation object 'traffickingInstanceCount':
+  ‘values’
+
+Bad \usage lines found in documentation object 'fixCountryCol':
+  fixCountryCol <- function(inVec)
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... WARNING
+Files not of a type allowed in a ‘data’ directory:
+  ‘world_map.Rdata’
+Please use e.g. ‘inst/extdata’ for non-R data files
+
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking examples ... NONE
+* checking PDF version of manual ... OK
+* checking for code which exercises the package ... WARNING
+No examples, no tests, no vignettes
+* DONE
+Status: 7 WARNINGs, 3 NOTEs

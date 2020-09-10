@@ -2,10 +2,10 @@
 \alias{fixCountryCol}
 \title{Standardize a vector of countries}
 \usage{
-fixCountryCol <- function(inVec)
+fixCountryCol(inVec)
 }
 \arguments{
-\item{df}{A vector of countries that are unstandardized}
+\item{inVec}{A vector of countries that are unstandardized}
 }
 \description{
 This function makes the following corrections:

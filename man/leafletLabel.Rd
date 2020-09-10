@@ -2,7 +2,7 @@
 \alias{leafletLabel}
 \title{Neatly format leaflet tooltips}
 \usage{
-leafletLabel(df, textNames, colNames, titleCol = NULL, title = NULL, size = 2, titleSize = 4)
+leafletLabel(df,textNames,colNames,titleCol=NULL,title=NULL,size=2,titleSize=4,digits=2)
 }
 \arguments{
 \item{df}{The dataframe you wish to label}
@@ -12,6 +12,7 @@ leafletLabel(df, textNames, colNames, titleCol = NULL, title = NULL, size = 2, t
 \item{title}{Optional. The name you wish to apply to all your tooltips.}
 \item{size}{Size of regular text, Default 2.}
 \item{titleSize}{Size of title text, Default 4.}
+\item{digits}{Number of digits to round numeric columns to, Default 2.}
 }
 \description{
 Takes in a dataframe, and returns the same dataframe with a label column formatted for leaflet maps. \cr

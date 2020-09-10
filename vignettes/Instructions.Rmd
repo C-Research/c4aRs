@@ -1,0 +1,142 @@
+---
+title: "Instructions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Instructions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+library(dplyr)
+library(stringr)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(c4aRs)
+```
+
+
+This package is meant to provide support to R users at C4. It contains resources for working with Seizure data, some dplyr tools, the C4 color palettes, and some miscellaneous tools. Below are a few examples. This package is meant as a supplement to existing tidyverse functions.
+
+
+# Seizure Data Resources
+
+```{r}
+
+seiz_dat <- 
+  tribble(
+  ~Year, ~Type, ~Seizure, ~Origin, ~Transit, ~Destination,
+    2010, 'Wildlife', 'China', 'Mexico', 'Belgium', 'China',
+    2010, 'Drugs', 'USA', 'Panama', 'USA', 'China',
+    2016, 'Firearms', 'China', 'South Africa', 'Qatar', 'China',
+    2019, 'Wildlife', 'China', 'Mexico', 'UAE', 'China',
+    )
+
+countryCols <- 
+  c('Seizure', 
+      'Origin', 
+      'Transit', 
+      'Destination')
+  
+
+```
+
+## Trafficking Instance Counts 
+
+To get TI count for all countries in the dataset, use `traffickingInstanceCount` without an argument for `by_col`.
+
+```{r}
+seiz_dat %>% 
+  traffickingInstanceCount(cols = countryCols)
+```
+
+Use the `by_col` to get TI count by that specific column. 
+
+
+```{r}
+seiz_dat %>% 
+  traffickingInstanceCount(cols = countryCols, by_col = "Type")
+```
+
+
+
+```{r}
+seiz_dat %>% 
+  traffickingInstanceCount(cols = countryCols, by_col = "Year")
+```
+
+
+## Trafficking Instances 
+
+To get all rows that contain trafficking instances for a given country (or multiple), use `selectByMultCols`. This selects all rows that have an entry that appears in the `values` argument in one of the `cols`.
+
+```{r}
+# get all Mexico TIs
+seiz_dat %>% 
+  selectByMultCols(cols = countryCols, values = "Mexico")
+```
+
+```{r}
+# get all North American TIs
+north_america <- c("USA", "Mexico", "Canada")
+seiz_dat %>% 
+  selectByMultCols(cols = countryCols, values = north_america)
+```
+
+
+## Mapping/Plotting Resources
+
+`leafletLabel` and `plotlyLabel` provide a way of easily adding tooltip labels to maps and graphs. Each adds a label column that will plug into `leaflet` or `plotly`. `textNames` and `colNames` are required, and there are options to add a title and change font sizes. 
+
+
+```{r, eval = F}
+
+locs <- 
+  tribble(
+  ~Loc, ~Long, ~Lat, ~Type, ~People,
+    'A', 2.783629, 50.279807, 'Mine', 67,
+    'B', 2.782419, 50.281229, 'Grocery Store', 323,
+    'C', 2.780950, 50.287279, 'Train Station', 623,
+    'D', 2.777744, 50.291332, 'Place', 1505
+    )
+
+```
+
+
+```{r, eval = F}
+library(leaflet)
+
+locs %>% 
+  leafletLabel(textNames = c("Place Type", "Number of People"), 
+               colNames = c("Type", "People"), 
+               titleCol = "Loc",
+               titleSize = 2.8) %>% 
+  leaflet() %>% 
+  addTiles() %>% 
+  addMarkers(
+    lng = ~Long,
+    lat = ~Lat,
+    label = ~label %>% lapply(htmltools::HTML)
+  )
+  
+    
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
