@@ -4,13 +4,14 @@
 #'
 #' @return
 #'
-#' @examples For now, this package does nothing but export the corrected World Map.
+#' @examples See the vignette for more examples.
 #' data(world_map)
 #'
 #' @importFrom rlang .data
 
 
 `%>%` <-  magrittr::`%>%`
+`%+replace%` <- ggplot2::`%+replace%`
 
 
 fixCountryCol <- function(inVec){
@@ -298,42 +299,43 @@ scale_color_cells <- function(...){
 theme_c4ads <- function(...){
   font <- "Century Gothic"   #assign font family up front
 
-  theme_minimal() %+replace%    #replace elements we want to change
+  ggplot2::theme_minimal() %+replace%    #replace elements we want to change
 
-    theme(
+    ggplot2::theme(
 
 
       #since theme_minimal() already strips axis lines,
       #we don't need to do that again
 
       #text elements
-      plot.title = element_text(             #title
+      text = element_text(family = font),
+
+      plot.title = ggplot2::element_text(             #title
         family = font,            #set font family
         size = 20,                #set font size
         face = 'bold',            #bold typeface
         hjust = 0,                #left align
         vjust = 2),               #raise slightly
 
-      plot.subtitle = element_text(          #subtitle
+      plot.subtitle = ggplot2::element_text(          #subtitle
         family = font,            #font family
         size = 14),               #font size
 
-      plot.caption = element_text(           #caption
+      plot.caption = ggplot2::element_text(           #caption
         family = font,            #font family
         size = 9,                 #font size
         hjust = 1),               #right align
 
-      axis.title = element_text(             #axis titles
+      axis.title = ggplot2::element_text(             #axis titles
         family = font,            #font family
         size = 10),               #font size
 
-      axis.text = element_text(              #axis text
+      axis.text = ggplot2::element_text(              #axis text
         family = font,            #axis famuly
         size = 9),                #font size
 
-      axis.text.x = element_text(            #margin for axis text
-        margin=margin(5, b = 10)),
-
+      axis.text.x = ggplot2::element_text(            #margin for axis text
+        margin = ggplot2::margin(5, b = 10)),
 
       ...
     )
@@ -344,9 +346,10 @@ theme_c4ads <- function(...){
 
 
 
-.onAttach <- function(pkgname, libname) {
-  theme_set(theme_c4ads)
 
-  assign("scale_colour_discrete", function(..., values = rev(unname(c4_cols))) scale_colour_manual(..., values = values), globalenv())
-  assign("scale_fill_discrete", function(..., values = rev(unname(c4_cols))) scale_fill_manual(..., values = values), globalenv())
+.onAttach <- function(pkgname, libname) {
+  #ggplot2::theme_set(theme_c4ads())
+
+  assign("scale_colour_discrete", function(..., values = rev(unname(c4_cols))) ggplot2::scale_colour_manual(..., values = values), globalenv())
+  assign("scale_fill_discrete", function(..., values = rev(unname(c4_cols))) ggplot2::scale_fill_manual(..., values = values), globalenv())
 }
