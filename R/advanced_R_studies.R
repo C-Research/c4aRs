@@ -289,3 +289,64 @@ scale_color_cells <- function(...){
     ...
   )
 }
+
+
+
+
+
+
+theme_c4ads <- function(...){
+  font <- "Century Gothic"   #assign font family up front
+
+  theme_minimal() %+replace%    #replace elements we want to change
+
+    theme(
+
+
+      #since theme_minimal() already strips axis lines,
+      #we don't need to do that again
+
+      #text elements
+      plot.title = element_text(             #title
+        family = font,            #set font family
+        size = 20,                #set font size
+        face = 'bold',            #bold typeface
+        hjust = 0,                #left align
+        vjust = 2),               #raise slightly
+
+      plot.subtitle = element_text(          #subtitle
+        family = font,            #font family
+        size = 14),               #font size
+
+      plot.caption = element_text(           #caption
+        family = font,            #font family
+        size = 9,                 #font size
+        hjust = 1),               #right align
+
+      axis.title = element_text(             #axis titles
+        family = font,            #font family
+        size = 10),               #font size
+
+      axis.text = element_text(              #axis text
+        family = font,            #axis famuly
+        size = 9),                #font size
+
+      axis.text.x = element_text(            #margin for axis text
+        margin=margin(5, b = 10)),
+
+
+      ...
+    )
+}
+
+
+
+
+
+
+.onAttach <- function(pkgname, libname) {
+  theme_set(theme_c4ads)
+
+  assign("scale_colour_discrete", function(..., values = rev(unname(c4_cols))) scale_colour_manual(..., values = values), globalenv())
+  assign("scale_fill_discrete", function(..., values = rev(unname(c4_cols))) scale_fill_manual(..., values = values), globalenv())
+}
