@@ -3,7 +3,7 @@ Type: Package
 Title: Resources for C4 R Users
 Version: 0.1.8
 Author: Max Kearns
-Maintainer: Max Kearns <max.kearns@c4ads.org@c4ads.org>
+Maintainer: Max Kearns <max.kearns@c4ads.org>
 Description: Provides color schemes, themes, maps, and other tools to assist in the production of quality R visualizations.
 License: MIT + file LICENSE
 Encoding: UTF-8
