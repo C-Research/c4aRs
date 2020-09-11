@@ -272,3 +272,20 @@ c4_col_spooky <- c('#f75151', '#414042','#A0B9D0','#122945', '#043D5D')
 c4_col_dusty <- c('#f75151', '#414042', '#F8E5C8', '#D4AD6D', '#686B30')
 
 
+scale_fill_cells <- function(...){
+  ggplot2:::manual_scale(
+    'fill',
+    values = setNames(c("#93261e", "#440154", "#2a4f7b", "#729837", "#2f4f4f", "#fc7247", "#414042"),
+                      c("CFIT", "CounterPro", "Data", "ECFC", "NattyR","OCGC", "Management")),
+    ...
+  )
+}
+
+scale_color_cells <- function(...){
+  ggplot2:::manual_scale(
+    'color',
+    values = setNames(c("#93261e", "#440154", "#2a4f7b", "#729837", "#2f4f4f", "#fc7247", "#414042"),
+                      c("CFIT", "CounterPro", "Data", "ECFC", "NattyR","OCGC", "Management")),
+    ...
+  )
+}
