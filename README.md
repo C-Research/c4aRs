@@ -25,7 +25,7 @@ Another exampe is `traffickingInstanceCount`, which will count return a datafram
 
 #### ggplot2 theme 
 
-When c4aRs is loaded, our theme is automatically loaded, so it will be applied to any ggplot that you create automatically. If 'Century Gothic' is not installed, the graphs will not render
+When c4aRs is loaded, our theme is automatically loaded, so it will be applied to any ggplot that you create automatically. If 'Century Gothic' is not installed, the graphs will not render. If you want to use the theme, and also add additional elements, you can add it to a plot using `theme_c4ads()`.
 
 #### Colors 
 
