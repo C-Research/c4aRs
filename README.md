@@ -1,6 +1,6 @@
 # c4aRs
 
-This package is a convenient location for R resources for C4ADS analysts.
+This package is a convenient location for R resources to be used by C4ADS analysts.
 
 ## Installation
 
