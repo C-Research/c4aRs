@@ -281,7 +281,6 @@ scale_fill_cells <- function(...){
     ...
   )
 }
-
 scale_color_cells <- function(...){
   ggplot2:::manual_scale(
     'color',
@@ -296,8 +295,7 @@ scale_color_cells <- function(...){
 
 
 
-theme_c4ads <- function(...){
-  font <- "Century Gothic"   #assign font family up front
+theme_c4ads <- function(font = "Century Gothic", ...){   #assign font family up front
 
   ggplot2::theme_minimal() %+replace%    #replace elements we want to change
 
@@ -348,7 +346,7 @@ theme_c4ads <- function(...){
 
 
 .onAttach <- function(pkgname, libname) {
-  #ggplot2::theme_set(theme_c4ads())
+  ggplot2::theme_set(theme_c4ads())
 
   assign("scale_colour_discrete", function(..., values = rev(unname(c4_cols))) ggplot2::scale_colour_manual(..., values = values), globalenv())
   assign("scale_fill_discrete", function(..., values = rev(unname(c4_cols))) ggplot2::scale_fill_manual(..., values = values), globalenv())
