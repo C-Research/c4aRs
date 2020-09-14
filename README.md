@@ -31,7 +31,7 @@ When c4aRs is loaded, our theme is automatically loaded, so it will be applied t
 
 The C4ADS colors are also available in Hex code form in the c4aRs package. They are presented in the following objects.
 
-* `c4aRs::c4_cols` - a named vector of all the C4 base colors.
+* `c4_cols` - a named vector of all the C4 base colors.
 * `c4_col_gradients` - a named list of all the c4 base colors, along with 3 lighter hues for each color.
 * `c4_col_leafy` - a vector of all the colors in the leafy palette.
 * `c4_col_spooky` - a vector of all the colors in the spooky palette.
