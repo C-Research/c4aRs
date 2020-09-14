@@ -305,8 +305,6 @@ theme_c4ads <- function(font = "Century Gothic", ...){   #assign font family up 
       #since theme_minimal() already strips axis lines,
       #we don't need to do that again
 
-      #text elements
-      text = ggplot2::element_text(family = font),
 
       plot.title = ggplot2::element_text(             #title
         family = font,            #set font family
