@@ -6,7 +6,7 @@ This package is a convenient location for R resources to be used by C4ADS analys
 
 1. Install `devtools` if not already installed with `install.packages('devtools')`.
 2. Install `c4aRs` using `devtools` using the command `devtools::install_github('C-Research/c4aRs')`.
-3. You may be prompted to install some updates to different packages. You may update, but make sure to not install the `stringi` update, as this will cause your installation to fail. 
+3. You may be prompted to install some updates to different packages. You should update all packages, but make sure to not install the `stringi` update, as this will cause your installation to fail. To install all but `stringi`, enter the number for each package separated by a space. 
 4. Done!
 
 ## Century Gothic
