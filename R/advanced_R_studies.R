@@ -340,14 +340,20 @@ theme_c4ads <- function(font = "Century Gothic", ...){   #assign font family up 
 }
 
 
-
-
-
+### work these in as continuous scales
+# Spooky: #EBEFF6 #03B2CB #05747C #1D2A44 (edited)
+# Dusty: #FEFAF4 #FBEAD0 #D9B268# #686B30 (edited)
+# Leafy:  #EEEDE6 #B3B299  #05A07E #004342 (edited)
 
 
 .onAttach <- function(pkgname, libname) {
   ggplot2::theme_set(theme_c4ads())
 
-  assign("scale_colour_discrete", function(..., values = rev(unname(c4_cols))) ggplot2::scale_colour_manual(..., values = values), globalenv())
-  assign("scale_fill_discrete", function(..., values = rev(unname(c4_cols))) ggplot2::scale_fill_manual(..., values = values), globalenv())
-}
+  assign("scale_colour_discrete", function(..., values = c('#F75151', '#05A07E', '#B3B299', '#D4AD6D', '#686B30', '#A0B9D0', '#004342', '#03B2CB')) ggplot2::scale_colour_manual(..., values = values), globalenv())
+  assign("scale_fill_discrete", function(..., values = c('#F75151', '#05A07E', '#B3B299', '#D4AD6D', '#686B30', '#A0B9D0', '#004342', '#03B2CB')) ggplot2::scale_fill_manual(..., values = values), globalenv())
+
+ }
+
+
+
+
