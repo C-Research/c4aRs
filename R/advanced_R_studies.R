@@ -376,7 +376,7 @@ scale_color_continuous_leafy <- function(..., colors = c('#EEEDE6', '#B3B299', '
   assign("scale_fill_discrete", function(..., values = c('#F75151', '#05A07E', '#B3B299', '#D4AD6D', '#686B30', '#A0B9D0', '#004342', '#03B2CB')) ggplot2::scale_fill_manual(..., values = values), globalenv())
 
   assign("scale_fill_continuous", scale_fill_continuous_spooky, globalenv())
-  assign("scale_color_continuous", scale_color_continuous_spooky, globalenv())
+  assign("scale_colour_continuous", scale_color_continuous_spooky, globalenv())
 
 
  }
