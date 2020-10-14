@@ -346,11 +346,38 @@ theme_c4ads <- function(font = "Century Gothic", ...){   #assign font family up 
 # Leafy:  #EEEDE6 #B3B299  #05A07E #004342 (edited)
 
 
+scale_fill_continuous_spooky <- function(..., colors = c('#EBEFF6', '#03B2CB', '#05747C', '#1D2A44')){
+  scale_fill_gradientn(colors = colors)
+}
+scale_fill_continuous_dusty <- function(..., colors = c('#FEFAF4', '#FBEAD0', '#D9B268', '#686B30')){
+  scale_fill_gradientn(colors = colors)
+}
+scale_fill_continuous_leafy <- function(..., colors = c('#EEEDE6', '#B3B299', '#05A07E', '#004342')){
+  scale_fill_gradientn(colors = colors)
+}
+
+scale_color_continuous_spooky <- function(..., colors = c('#EBEFF6', '#03B2CB', '#05747C', '#1D2A44')){
+  scale_color_gradientn(colors = colors)
+}
+scale_color_continuous_dusty <- function(..., colors = c('#FEFAF4', '#FBEAD0', '#D9B268', '#686B30')){
+  scale_color_gradientn(colors = colors)
+}
+scale_color_continuous_leafy <- function(..., colors = c('#EEEDE6', '#B3B299', '#05A07E', '#004342')){
+  scale_color_gradientn(colors = colors)
+}
+
+
+
+
 .onAttach <- function(pkgname, libname) {
   ggplot2::theme_set(theme_c4ads())
 
   assign("scale_colour_discrete", function(..., values = c('#F75151', '#05A07E', '#B3B299', '#D4AD6D', '#686B30', '#A0B9D0', '#004342', '#03B2CB')) ggplot2::scale_colour_manual(..., values = values), globalenv())
   assign("scale_fill_discrete", function(..., values = c('#F75151', '#05A07E', '#B3B299', '#D4AD6D', '#686B30', '#A0B9D0', '#004342', '#03B2CB')) ggplot2::scale_fill_manual(..., values = values), globalenv())
+
+  assign("scale_fill_continuous", scale_fill_continuous_spooky, globalenv())
+  assign("scale_color_continuous", scale_color_continuous_spooky, globalenv())
+
 
  }
 
