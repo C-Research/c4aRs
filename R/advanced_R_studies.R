@@ -347,23 +347,23 @@ theme_c4ads <- function(font = "Century Gothic", ...){   #assign font family up 
 
 
 scale_fill_continuous_spooky <- function(..., colors = c('#EBEFF6', '#03B2CB', '#05747C', '#1D2A44')){
-  scale_fill_gradientn(colors = colors)
+  scale_fill_gradientn(colors = colors, ...)
 }
 scale_fill_continuous_dusty <- function(..., colors = c('#FEFAF4', '#FBEAD0', '#D9B268', '#686B30')){
-  scale_fill_gradientn(colors = colors)
+  scale_fill_gradientn(colors = colors, ...)
 }
 scale_fill_continuous_leafy <- function(..., colors = c('#EEEDE6', '#B3B299', '#05A07E', '#004342')){
-  scale_fill_gradientn(colors = colors)
+  scale_fill_gradientn(colors = colors, ...)
 }
 
 scale_color_continuous_spooky <- function(..., colors = c('#EBEFF6', '#03B2CB', '#05747C', '#1D2A44')){
-  scale_color_gradientn(colors = colors)
+  scale_color_gradientn(colors = colors, ...)
 }
 scale_color_continuous_dusty <- function(..., colors = c('#FEFAF4', '#FBEAD0', '#D9B268', '#686B30')){
-  scale_color_gradientn(colors = colors)
+  scale_color_gradientn(colors = colors, ...)
 }
 scale_color_continuous_leafy <- function(..., colors = c('#EEEDE6', '#B3B299', '#05A07E', '#004342')){
-  scale_color_gradientn(colors = colors)
+  scale_color_gradientn(colors = colors, ...)
 }
 
 
