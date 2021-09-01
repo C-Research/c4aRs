@@ -335,11 +335,11 @@ theme_c4ads <- function(font = "Century Gothic", ...){   #assign font family up 
 
       axis.title = ggplot2::element_text(             #axis titles
         family = font,            #font family
-        size = 16),               #font size
+        size = 15),               #font size
 
       axis.text = ggplot2::element_text(              #axis text
         family = font,            #axis famuly
-        size = 14),                #font size
+        size = 13),                #font size
 
       axis.text.x = ggplot2::element_text(            #margin for axis text
         margin = ggplot2::margin(5, b = 10)),
