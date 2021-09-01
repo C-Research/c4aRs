@@ -308,29 +308,38 @@ theme_c4ads <- function(font = "Century Gothic", ...){   #assign font family up 
       #text elements
       text = ggplot2::element_text(family = font),
 
+      legend.text = element_text(
+        family = font,            #font family
+        size = 16
+      ),
+      legend.title = element_text(
+        family = font,            #font family
+        size = 18
+      ),
+
       plot.title = ggplot2::element_text(             #title
         family = font,            #set font family
-        size = 20,                #set font size
+        size = 24,                #set font size
         face = 'bold',            #bold typeface
         hjust = 0,                #left align
         vjust = 2),               #raise slightly
 
       plot.subtitle = ggplot2::element_text(          #subtitle
         family = font,            #font family
-        size = 14),               #font size
+        size = 17),               #font size
 
       plot.caption = ggplot2::element_text(           #caption
         family = font,            #font family
-        size = 9,                 #font size
+        size = 12,                 #font size
         hjust = 1),               #right align
 
       axis.title = ggplot2::element_text(             #axis titles
         family = font,            #font family
-        size = 10),               #font size
+        size = 16),               #font size
 
       axis.text = ggplot2::element_text(              #axis text
         family = font,            #axis famuly
-        size = 9),                #font size
+        size = 14),                #font size
 
       axis.text.x = ggplot2::element_text(            #margin for axis text
         margin = ggplot2::margin(5, b = 10)),
