@@ -308,11 +308,11 @@ theme_c4ads <- function(font = "Century Gothic", ...){   #assign font family up 
       #text elements
       text = ggplot2::element_text(family = font),
 
-      legend.text = element_text(
+      legend.text = ggplot2::element_text(
         family = font,            #font family
         size = 16
       ),
-      legend.title = element_text(
+      legend.title = ggplot2::element_text(
         family = font,            #font family
         size = 18
       ),
